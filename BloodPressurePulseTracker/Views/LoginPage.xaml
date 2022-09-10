@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+            xmlns:local="clr-namespace:BloodPressurePulseTracker"
+             xmlns:vm="clr-namespace:BloodPressurePulseTracker.ViewModels"
+             NavigationPage.HasNavigationBar="false" 
+             NavigationPage.BackButtonTitle=""
+           
+             Shell.NavBarIsVisible="False" 
+             x:Class="BloodPressurePulseTracker.Views.LoginPage"
+             Title="LoginPage">
+
+    <ContentPage.BindingContext>
+        <vm:LoginPageViewModel />
+    </ContentPage.BindingContext>
+    
+    <Grid>
+        <Image Source="background.jpeg" Aspect="AspectFill" />
+        <ScrollView VerticalOptions="FillAndExpand">
+            <VerticalStackLayout VerticalOptions="FillAndExpand" Padding="6" Spacing="10">
+                <VerticalStackLayout VerticalOptions="CenterAndExpand">
+                    <Image Source="bloodpressure.png" HorizontalOptions="CenterAndExpand" />
+                    <VerticalStackLayout x:Name="FormLayout" Spacing="5" VerticalOptions="CenterAndExpand">
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="Username" FontSize="16" />
+                            <Entry Text="{Binding Username}" Keyboard="Plain" BackgroundColor="{StaticResource Yellow300Accent}"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Spacing="8">
+                            <Label Text="Password" FontSize="16" />
+                            <Entry Text="{Binding Password}" IsPassword="True" BackgroundColor="{StaticResource Yellow300Accent}"/>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+                <Button x:Name="LoginButton" Command="{Binding LoginCommand}" VerticalOptions="EndAndExpand" Text="Login" />
+                <Button x:Name="CreateAccountButton" Command="{Binding CreateAccountCommand}" VerticalOptions="EndAndExpand" Text="Create Account" BackgroundColor="{StaticResource PrimaryColorOrange}" TextColor="{StaticResource SecondaryColorBlue}"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
