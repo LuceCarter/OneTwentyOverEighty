@@ -6,9 +6,12 @@
     xmlns:local="clr-namespace:BloodPressurePulseTracker.Views"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:LoginPage}"
-        Route="MainPage" />
+    <ShellContent Route="Login"
+                  ContentTemplate="{DataTemplate local:LoginPage}"
+                  Icon="login">
+    </ShellContent>
 
+    <TabBar Route="Main">
+        
+    </TabBar>
 </Shell>
