@@ -12,6 +12,8 @@
     </ShellContent>
 
     <TabBar Route="Main">
-        
+        <ShellContent Title="Log" Icon="bloodpressure.png" Route="LogReading" ContentTemplate="{DataTemplate local:LogReadingPage}" />
+        <ShellContent Title="Trends" Icon="trends.png" Route="Trends" ContentTemplate="{DataTemplate local:TrendsPage}" />
+        <ShellContent Title="History" Icon="history.png" Route="History" ContentTemplate="{DataTemplate local:HistoryPage}" />
     </TabBar>
 </Shell>

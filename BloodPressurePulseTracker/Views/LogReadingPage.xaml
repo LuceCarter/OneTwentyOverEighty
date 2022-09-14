@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:BloodPressurePulseTracker.ViewModels"
+             x:Class="BloodPressurePulseTracker.Views.LogReadingPage"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False"
+             Title="LogReadingPage">
+
+    <ContentPage.BindingContext>
+        <vm:LogReadingPageViewModel />
+    </ContentPage.BindingContext>
+    
+    <VerticalStackLayout Padding="15"
+                         Spacing="15"
+                         VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="CenterAndExpand">
+
+        <Label Text="BP" FontSize="18" FontAttributes="Bold" TextColor="{StaticResource SecondaryColorBlue}"/>
+        <Entry BackgroundColor="{StaticResource Gray100}" Text="{Binding Systolic}" />
+        <Label Text="/" FontSize="20"/>
+        <Entry BackgroundColor="{StaticResource Gray100}" Text="{Binding Diastolic}" />
+        <Label Text="Pulse" FontSize="18" FontAttributes="Bold" TextColor="{StaticResource SecondaryColorBlue}" />
+        <Entry BackgroundColor="{StaticResource Gray100}" Text="{Binding Pulse}" />
+
+        <Button Text="Log Reading"
+                VerticalOptions="EndAndExpand"
+                HorizontalOptions="Center"
+                Command="{Binding LogReadingCommand}" />
+
+    </VerticalStackLayout>
+</ContentPage>

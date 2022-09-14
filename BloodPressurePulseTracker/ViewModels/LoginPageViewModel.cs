@@ -6,7 +6,7 @@ using Realms.Sync;
 
 namespace BloodPressurePulseTracker.ViewModels
 {
-    public  partial class LoginPageViewModel : ObservableObject
+    public partial class LoginPageViewModel : ObservableObject
     {
         private User user;
  

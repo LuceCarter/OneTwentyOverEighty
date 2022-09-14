@@ -1,4 +1,4 @@
-﻿x`using MongoDB.Bson;
+﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BloodPressurePulseTracker.Models
 {
-    public class BloodPressurePulseReading : RealmObject
+    public class BloodPressureReading : RealmObject
     {
         [PrimaryKey]
         [MapTo("_id")]
